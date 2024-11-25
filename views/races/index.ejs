@@ -8,7 +8,7 @@
             <th>Date</th>
             <th>Location</th>
             <th>Participants</th>
-            <th>Type</th>
+            <th>Distance</th>
             <th>Winner</th>
             <th>Actions</th>
         </tr>
@@ -16,11 +16,11 @@
     <tbody>
         <% races.forEach((race) => { %>
             <tr>
-                <td><%= race.raceName %></td>
-                <td><%= race.dateTime %></td>
+                <td><%= race.name %></td>
+                <td><%= race.date.toISOString().slice(0, 10) %></td>
                 <td><%= race.location %></td>
-                <td><%= race.participants %></td>
-                <td><%= race.raceType %></td>
+                <td><%= race.participants.join(', ') %></td>
+                <td><%= race.distance %></td>
                 <td><%= race.winner %></td>
                 <td>
                     <a href="/races/edit/<%= race._id %>" class="btn btn-warning">Edit</a>

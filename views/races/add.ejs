@@ -1,30 +1,32 @@
 <%- include('../partials/header') %>
-<h1>Add Race</h1>
+
+<h1 class="my-4">Add a New Race</h1>
 <form action="/races/add" method="POST">
     <div class="form-group">
-        <label for="raceName">Race Name</label>
-        <input type="text" class="form-control" id="raceName" name="raceName" required>
+        <label for="name">Race Name:</label>
+        <input type="text" name="name" id="name" class="form-control" required>
     </div>
     <div class="form-group">
-        <label for="dateTime">Date and Time</label>
-        <input type="datetime-local" class="form-control" id="dateTime" name="dateTime" required>
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date" class="form-control" required>
     </div>
     <div class="form-group">
-        <label for="location">Location</label>
-        <input type="text" class="form-control" id="location" name="location" required>
+        <label for="location">Location:</label>
+        <input type="text" name="location" id="location" class="form-control" required>
     </div>
     <div class="form-group">
-        <label for="participants">Participants</label>
-        <input type="number" class="form-control" id="participants" name="participants" required>
+        <label for="participants">Participants (comma-separated):</label>
+        <input type="text" name="participants" id="participants" class="form-control" required>
     </div>
     <div class="form-group">
-        <label for="raceType">Race Type</label>
-        <input type="text" class="form-control" id="raceType" name="raceType" required>
+        <label for="distance">Distance:</label>
+        <input type="text" name="distance" id="distance" class="form-control" required>
     </div>
     <div class="form-group">
-        <label for="winner">Winner</label>
-        <input type="text" class="form-control" id="winner" name="winner">
+        <label for="winner">Winner:</label>
+        <input type="text" name="winner" id="winner" class="form-control">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Add Race</button>
 </form>
+
 <%- include('../partials/footer') %>

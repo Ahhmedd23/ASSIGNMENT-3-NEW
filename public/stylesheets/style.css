@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+body {
+  background-image: url('/public/images/race.jpg'); /* Update with your actual image file name */
+  background-size: cover; /* Ensures the image covers the whole screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-attachment: fixed; /* Keeps the image fixed during scrolling */
+  font-family: Arial, sans-serif; /* Optional: Set a default font */
+  color: #fff; /* Optional: Makes text white for better readability on dark backgrounds */
+}
