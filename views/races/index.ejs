@@ -1,0 +1,33 @@
+<%- include('../partials/header') %>
+<h1>Race Tracker</h1>
+<a href="/races/add" class="btn btn-primary">Add Race</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Participants</th>
+            <th>Type</th>
+            <th>Winner</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% races.forEach((race) => { %>
+            <tr>
+                <td><%= race.raceName %></td>
+                <td><%= race.dateTime %></td>
+                <td><%= race.location %></td>
+                <td><%= race.participants %></td>
+                <td><%= race.raceType %></td>
+                <td><%= race.winner %></td>
+                <td>
+                    <a href="/races/edit/<%= race._id %>" class="btn btn-warning">Edit</a>
+                    <a href="/races/delete/<%= race._id %>" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+<%- include('../partials/footer') %>
